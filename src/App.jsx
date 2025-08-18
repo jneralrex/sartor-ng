@@ -13,6 +13,7 @@ import BodyLayout from './components/BodyLayout';
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Leadmagnet from './pages/LeadMagnet';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,9 @@ const router = createBrowserRouter(
       {/* PUBLIC ROUTES */}
       <Route path="/" element={<BodyLayout />}>
         <Route index element={<LandingPage />} />
+      </Route>
+      <Route >
+        <Route path="lead" element={<Leadmagnet />} />
       </Route>
     </Route>
   )
