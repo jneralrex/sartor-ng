@@ -3,7 +3,7 @@ import tabOne from '../assets/images/tabOne.png';
 import EmailForm from '../components/EmailForm';
 
 
-export default function Leadmagnet() {
+export default function ReportPage() {
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
 
@@ -64,7 +64,8 @@ export default function Leadmagnet() {
         </div>
       </section>
 
-     <div>
+
+       <div>
       <EmailForm/>
      </div>
 
