@@ -13,7 +13,10 @@ import BodyLayout from './components/BodyLayout';
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Leadmagnet from './pages/LeadMagnet';
+import CheckListLeadmagnet from './pages/CheckListLeadmagnet';
+import ReportLeadmagnet from './pages/ReportLeadmagnet';
+import PlaybookLeadMagnet from './pages/PlaybookLeadmagnet';
+import BluePrintLeadmagnet from './pages/BluePrintLeadmagnet';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,7 +26,10 @@ const router = createBrowserRouter(
         <Route index element={<LandingPage />} />
       </Route>
       <Route >
-        <Route path="lead" element={<Leadmagnet />} />
+        <Route path="checklist" element={<CheckListLeadmagnet />} />
+        <Route path='report' element={<ReportLeadmagnet/>} />
+        <Route path='playbook' element={<PlaybookLeadMagnet/>} />
+        <Route path='blueprint' element={<BluePrintLeadmagnet/>} />
       </Route>
     </Route>
   )

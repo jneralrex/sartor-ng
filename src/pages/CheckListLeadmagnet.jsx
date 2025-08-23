@@ -3,7 +3,7 @@ import tabOne from '../assets/images/tabOne.png';
 import EmailForm from '../components/EmailForm';
 
 
-export default function ReportPage() {
+export default function CheckListLeadmagnet() {
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
 
@@ -64,8 +64,7 @@ export default function ReportPage() {
         </div>
       </section>
 
-
-       <div>
+     <div>
       <EmailForm/>
      </div>
 
