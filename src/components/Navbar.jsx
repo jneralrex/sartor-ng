@@ -17,13 +17,13 @@ const Navbar = () => {
           <ul className="hidden md:flex space-x-1 md:space-x-8 text-gray-700 text-[9px] md:text-sm font-medium">
             <li><a href="#">About Us</a></li>
             <li><a href="#">Our Services ▾</a></li>
-            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Blog</a></li>
           </ul>
 
           {/* Book Button */}
           <Link
             to="https://calendly.com/sartorlimited/1-on-1-free-30mins-introductory-consulting-call-official"
-            className="bg-[#00D743] text-blue-700 px-1 py-1 md:px-5 md:py-2 rounded-md text-[9px] md:text-sm"
+            className="bg-[#00A859] text-white px-1 py-1 md:px-5 md:py-2 rounded-md text-[9px] md:text-sm"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import smallbar from "../assets/images/smallbar.png";
+import chat from "../assets/images/chat.png";
 import pippics from "../assets/images/pippics.png";
 import sci from "../assets/images/sci.png";
 import industry from "../assets/images/industry.png"; // Add your actual images here import fmcg from "../assets/images/fmcg.png";
@@ -9,7 +9,6 @@ import company from "../assets/images/company.webp";
 import cream from "../assets/images/cream.png";
 import tab from "../assets/images/tab.png";
 import phone from "../assets/images/phone.png";
-import Navbar from "../components/Navbar";
 
 const LandingPage = () => {
     const testimonials = [
@@ -49,10 +48,9 @@ const LandingPage = () => {
         <div className="min-h-screen font-[sfpro] w-full">
 
             {/* Hero Section */}
-            {/* <section className="text-center py-8 md:py-16 px-6 md:px-20 bg-[#EAECF0] md:min-h-screen"> */}
             <section className="text-center pt-[50px] px-6 md:px-20 bg-[#EAECF0] min-h-screen flex flex-col justify-center items-center relative">
 
-                <h1 className="text-[27px] sm:text-[35px] md:text-5xl font-bold text-blue-900 leading-tight">
+                <h1 className="text-[27px] sm:text-[35px] md:text-5xl font-bold text-[#000068] leading-tight">
                     Custom Tech And Advice To <br />
                     Start, Grow, And Lead Your <br />
                     Product Business.
@@ -63,7 +61,7 @@ const LandingPage = () => {
                 <div className="mt-3 sm:mt-8 flex flex-col md:flex-row justify-center items-center gap-4">
                     <Link
                         to="https://calendly.com/sartorlimited/1-on-1-free-30mins-introductory-consulting-call-official"
-                        className="w-48 text-center bg-[#00D743] text-blue-700 px-5 py-2 rounded-md text-[9px] md:text-sm sm:py-[15px]"
+                        className="w-48 text-center bg-[#00A859] text-white px-5 py-2 rounded-md text-[9px] md:text-sm sm:py-[15px]"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -71,7 +69,7 @@ const LandingPage = () => {
                     </Link>
 
                     <Link
-                        className="w-48 text-center bg-white text-blue-700 text-[9px] md:text-sm px-5 py-2 rounded-md sm:py-[15px]"
+                        className="w-48 text-center bg-white text-[#000068] text-[9px] md:text-sm px-5 py-2 rounded-md sm:py-[15px]"
                     >
                         Learn More
                     </Link>
@@ -97,51 +95,9 @@ const LandingPage = () => {
 
             </section>
 
-            {/* Services */}
-            <section className="max-w-7xl mx-auto px-6 py-16 bg-white">
-                <div className="mb-12 md:text-start text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Services</h2>
-                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto md:mx-0 md:max-w-[620px]">
-                        We combine deep industry knowledge with cutting-edge technology to offer solutions that
-                        are built with your unique risks and growth ambitions in mind. Explore how we can transform your operations.
-                    </p>
-                </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
-                    <div className="border rounded-lg p-6 shadow-sm">
-                        <div className="bg-gray-50 p-4 rounded-md mb-4">
-                            <img src={smallbar} alt="CRM Icon" />
-                        </div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-1">Sartor CRM</h3>
-                        <p className="text-sm text-gray-600 mb-4">
-                            Our CRM boosts sales, streamlines LPOs, maps retail, and prevents counterfeiting with AI + Blockchain.
-                        </p>
-                        <button className="px-4 py-2 text-sm font-medium text-white bg-[#00D743] rounded">
-                            Learn More
-                        </button>
-                    </div>
-
-                    {/* Side Services */}
-                    <div className="grid gap-4">
-                        {[
-                            { title: 'Sartor LMS', description: 'A learning platform for team onboarding, training, and building workforce excellence.' },
-                            { title: 'Sartor Chain', description: 'AI tags on labels let customers verify products with a quick scan.' },
-                            { title: 'Business Consulting', description: 'One-on-one support to help founders build brands, boost sales, and lead operations effectively.' },
-                        ].map((service, idx) => (
-                            <div key={idx} className="border rounded-lg p-5 bg-gray-50 shadow-sm">
-                                <h4 className="font-semibold text-gray-900 mb-2">{service.title}</h4>
-                                <p className="text-sm text-gray-600 mb-3">{service.description}</p>
-                                <button className="px-3 py-1 text-xs text-gray-600 border border-gray-300 rounded bg-white cursor-not-allowed">
-                                    Coming Soon
-                                </button>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* About Us */}
-            <section className="bg-white py-16 px-6 md:px-20">
+                      {/* About Us */}
+            <section className="bg-white py-20 px-6 md:px-20">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
                     <img
                         src={pippics}
@@ -163,6 +119,63 @@ const LandingPage = () => {
                 </div>
             </section>
 
+
+
+            {/* Services */}
+            <section className="max-w-7xl mx-auto px-6 py-16 bg-white">
+                <div className="mb-12 md:text-start text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Services</h2>
+                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto md:mx-0 md:max-w-[620px]">
+                        We combine deep industry knowledge with cutting-edge technology to offer solutions that
+                        are built with your unique risks and growth ambitions in mind. Explore how we can transform your operations.
+                    </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8 ">
+                    <div className="border rounded-lg p-6 shadow-sm ">
+                        <div className="bg-gray-50 rounded-md mb-4">
+                            <img src={chat} alt="CRM Icon" className="max-h-[300px] w-full"/>
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-900 mb-1">Sartor CRM</h3>
+                        <p className="text-sm text-gray-600 mb-4">
+                            Our CRM boosts sales, streamlines LPOs, maps retail, and prevents counterfeiting with AI + Blockchain.
+                        </p>
+                        <button className="px-4 py-2 text-sm font-medium text-white bg-[#00A859] rounded">
+                            Learn More
+                        </button>
+                    </div>
+
+                    {/* Side Services */}
+                    <div className=" flex flex-col justify-between">
+                        {[
+                            { title: 'Sartor LMS', description: 'A learning platform for team onboarding, training, and building workforce excellence.' },
+                        ].map((service, idx) => (
+                            <div key={idx} className="border rounded-lg p-5 bg-gray-50 shadow-sm h-[150px]">
+                                <h4 className="font-semibold text-gray-900 mb-2">{service.title}</h4>
+                                <p className="text-sm text-gray-600 mb-3">{service.description}</p>
+                                <button className="px-3 py-1 text-xs text-gray-600 border border-gray-300 rounded bg-white cursor-not-allowed">
+                                    Coming Soon
+                                </button>
+                            </div>
+                        ))}
+                     <div className="border rounded-lg p-5 bg-gray-50 shadow-sm h-[100px] flex  flex-col text-start justify-start">
+                                <h4 className="font-semibold text-gray-900 mb-2">Sartor Chain</h4>
+                                <p className="text-sm text-gray-600 mb-3">A learning platform for team onboarding, training, and building workforce excellence.</p>
+                                
+                            </div>
+                     <div className="border rounded-lg p-5 bg-gray-50 shadow-sm h-[100px] flex  flex-col text-start justify-start">
+                                <h4 className="font-semibold text-gray-900 mb-2">Business Consulting</h4>
+                                <p className="text-sm text-gray-600 mb-3">One-on-one support to help founders build brands, boost sales, and lead operations effectively.</p>
+                                
+                            </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+  
+
             {/* Who We Partner With */}
             <section className="bg-black text-white py-8 md:py-16 px-6 md:px-20">
                 <div className="max-w-6xl mx-auto">
@@ -179,7 +192,7 @@ const LandingPage = () => {
                                         key={index}
                                         onClick={() => setActiveIndex(index)}
                                         className={`cursor-pointer  px-5 py-2 md:px-5 md:py-3 text-center items-center flex text-[10px] md:text-sm border rounded-md transition-all duration-200 ${index === activeIndex
-                                            ? "bg-blue-900 border-blue-800 text-white"
+                                            ? "bg-[#000068] border-blue-800 text-white"
                                             : "border-gray-500 text-white hover:bg-gray-800"
                                             }`}
                                     >
@@ -232,7 +245,7 @@ const LandingPage = () => {
                     ))}
                 </div>
                 <div className="text-center">
-                    <button className="px-6 py-2 text-sm font-medium bg-blue-900 text-white rounded hover:bg-blue-950 transition">
+                    <button className="px-6 py-2 text-sm font-medium bg-[#000068] text-white rounded hover:bg-blue-950 transition">
                         View All Posts
                     </button>
                 </div>
