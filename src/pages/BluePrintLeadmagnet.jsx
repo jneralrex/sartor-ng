@@ -1,7 +1,7 @@
 import bookFour from '../assets/images/bookThree.png';
 import tabFour from '../assets/images/tabThree.png';
 import EmailForm from '../components/EmailForm';
-import ZohoOptinForm from '../components/ZohoOptInForm';
+import ZohoOptinForm from '../components/ZohoOptinForm';
 
 
 export default function BluePrintLeadmagnet() {

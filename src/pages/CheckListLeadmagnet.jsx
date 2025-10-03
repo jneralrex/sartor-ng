@@ -1,7 +1,7 @@
 import bookOne from '../assets/images/bookOne.png';
 import tabOne from '../assets/images/tabOne.png';
 import EmailForm from '../components/EmailForm';
-import ZohoOptinForm from '../components/ZohoOptInForm';
+import ZohoOptinForm from '../components/ZohoOptinForm';
 
 
 export default function CheckListLeadmagnet() {
