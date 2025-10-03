@@ -1,6 +1,7 @@
 import bookTwo from '../assets/images/bookTwo.png';
 import tabTwo from '../assets/images/tabTwo.png';
 import EmailForm from '../components/EmailForm';
+import ZohoOptinForm from '../components/ZohoOptInForm';
 
 
 export default function ReportLeadmagnet() {
@@ -66,7 +67,7 @@ export default function ReportLeadmagnet() {
 
 
       <div>
-        <EmailForm />
+        <ZohoOptinForm />
       </div>
 
       {/* Footer */}

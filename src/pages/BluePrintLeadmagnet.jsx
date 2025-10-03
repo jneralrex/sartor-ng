@@ -1,6 +1,7 @@
 import bookFour from '../assets/images/bookThree.png';
 import tabFour from '../assets/images/tabThree.png';
 import EmailForm from '../components/EmailForm';
+import ZohoOptinForm from '../components/ZohoOptInForm';
 
 
 export default function BluePrintLeadmagnet() {
@@ -66,7 +67,8 @@ export default function BluePrintLeadmagnet() {
 
 
             <div>
-                <EmailForm />
+                        <ZohoOptinForm/>
+
             </div>
 
             {/* Footer */}

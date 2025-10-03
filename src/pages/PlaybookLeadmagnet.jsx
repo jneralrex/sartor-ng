@@ -1,6 +1,7 @@
 import bookThree from '../assets/images/bookThree.png';
 import tabThree from '../assets/images/tabThree.png';
 import EmailForm from '../components/EmailForm';
+import ZohoOptinForm from '../components/ZohoOptInForm';
 
 
 export default function PlaybookLeadMagnet() {
@@ -67,7 +68,8 @@ This playbook is your step-by-step guide to go from surviving to thriving. If yo
 
 
             <div>
-                <EmailForm />
+                        <ZohoOptinForm />
+
             </div>
 
             {/* Footer */}

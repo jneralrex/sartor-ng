@@ -1,6 +1,7 @@
 import bookOne from '../assets/images/bookOne.png';
 import tabOne from '../assets/images/tabOne.png';
 import EmailForm from '../components/EmailForm';
+import ZohoOptinForm from '../components/ZohoOptInForm';
 
 
 export default function CheckListLeadmagnet() {
@@ -65,7 +66,7 @@ export default function CheckListLeadmagnet() {
       </section>
 
      <div>
-      <EmailForm/>
+        <ZohoOptinForm />
      </div>
 
       {/* Footer */}
