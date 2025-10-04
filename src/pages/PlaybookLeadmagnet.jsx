@@ -16,9 +16,9 @@ export default function PlaybookLeadMagnet() {
                     <p className="mb-6 text-lg">
                         Learn the strategies, systems, and tools successful companies use to scale confidently.
                     </p>         
-                    <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-md font-semibold">
+                    {/* <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-md font-semibold">
                         Download Free Playbook        
-                    </button>
+                    </button> */}
                 </div>
                 <img
                     src={bookThree}

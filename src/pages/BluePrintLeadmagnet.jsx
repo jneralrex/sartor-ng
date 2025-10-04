@@ -16,8 +16,8 @@ export default function BluePrintLeadmagnet() {
                     </h1>
                     <p className="mb-6 text-lg">
                         Discover the frameworks successful companies use to optimise operations and accelerate growth.                    </p>
-                    <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-md font-semibold">
-                        Download Free Blueprint                    </button>
+                    {/* <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-md font-semibold">
+                        Download Free Blueprint                    </button> */}
                 </div>
                 <img
                     src={bookFour}

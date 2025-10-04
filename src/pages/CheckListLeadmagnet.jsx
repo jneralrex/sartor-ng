@@ -17,9 +17,9 @@ export default function CheckListLeadmagnet() {
           <p className="mb-6 text-lg">
             Use this proven checklist to uncover gaps, identify opportunities, and plan your next steps
           </p>
-          <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-md font-semibold">
+          {/* <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-md font-semibold">
             Download Free Checklist
-          </button>
+          </button> */}
         </div>
         <img
           src={bookOne}

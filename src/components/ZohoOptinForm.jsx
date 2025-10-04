@@ -1,6 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ZohoOptinForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://zgnp-zngp.maillist-manage.com/js/optin.min.js';
@@ -17,14 +21,62 @@ const ZohoOptinForm = () => {
       }
     };
     document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
+
+  // Observe success message visibility
+  useEffect(() => {
+    const successDiv = document.getElementById('Zc_SignupSuccess');
+    if (!successDiv) return;
+
+    const observer = new MutationObserver((mutations) => {
+      for (let mutation of mutations) {
+        if (!mutation.target.classList.contains('hidden')) {
+          setIsLoading(false); // Hide loader
+          toast.success('✅ Thank you for signing up!');
+          // Optional: additional logic here
+        }
+      }
+    });
+
+    observer.observe(successDiv, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
+
+  // Observe error message visibility
+  useEffect(() => {
+    const errorDiv = document.getElementById('errorMsgDiv');
+    if (!errorDiv) return;
+
+    const observer = new MutationObserver((mutations) => {
+      for (let mutation of mutations) {
+        if (!mutation.target.classList.contains('hidden')) {
+          setIsLoading(false); // Hide loader
+          toast.error('❌ Please fix the highlighted errors and try again.');
+        }
+      }
+    });
+
+    observer.observe(errorDiv, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
+
+  // Submit handler to show loader and trigger Zoho submit
+  const handleSubmitClick = () => {
+    setIsLoading(true);
+    // The Zoho script listens to this button ID click event internally to submit the form
+    document.getElementById('zcWebOptin')?.click();
+  };
 
   return (
     <div className="bg-gray-100 p-5 md:p-10">
       <div
         id="sf3z05a5285314f3b89b89b26a2bf155c7bbba4f0d62e24d923d64d4389fab34c25d"
         data-type="signupform"
-        className="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-lg shadow"
+        className="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-lg shadow relative"
       >
         <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-semibold text-indigo-900 mb-4">
@@ -58,7 +110,10 @@ const ZohoOptinForm = () => {
           target="_zcSignup"
         >
           {/* Error Message */}
-          <div id="errorMsgDiv" className="hidden bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded mb-5">
+          <div
+            id="errorMsgDiv"
+            className="hidden bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded mb-5"
+          >
             Please correct the marked field(s) below.
           </div>
 
@@ -105,16 +160,45 @@ const ZohoOptinForm = () => {
             type="button"
             name="SIGNUP_SUBMIT_BUTTON"
             id="zcWebOptin"
-            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-green-600 hover:bg-green-700 text-white text-base font-semibold rounded transition duration-300"
+            onClick={handleSubmitClick}
+            disabled={isLoading}
+            className={`w-full flex items-center justify-center gap-2 px-6 py-4 rounded text-white text-base font-semibold transition duration-300 ${
+              isLoading ? 'bg-green-400 cursor-not-allowed' : 'bg-green-600 hover:bg-green-700'
+            }`}
           >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                fillRule="evenodd"
-                d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-            Download Free Checklist Now
+            {isLoading ? (
+              <svg
+                className="animate-spin h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4l3.5-3.5L12 0v4a8 8 0 100 16v-4l-3.5 3.5L12 24v-4a8 8 0 01-8-8z"
+                ></path>
+              </svg>
+            ) : (
+              <>
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fillRule="evenodd"
+                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Download Free Checklist Now
+              </>
+            )}
           </button>
 
           {/* Hidden fields for Zoho */}
@@ -150,6 +234,8 @@ const ZohoOptinForm = () => {
             1,false,1,Last Name,2
           </span>
         </form>
+
+        <ToastContainer position="top-center" autoClose={5000} />
       </div>
     </div>
   );

@@ -16,8 +16,8 @@ export default function ReportLeadmagnet() {
           </h1>
           <p className="mb-6 text-lg">
             Discover the trends, technologies, and strategies that are shaping the future of secure product distribution          </p>
-          <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-md font-semibold">
-            Download Free Report          </button>
+          {/* <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-md font-semibold">
+            Download Free Report          </button> */}
         </div>
         <img
           src={bookTwo}
