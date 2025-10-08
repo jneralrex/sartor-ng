@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <nav className="flex justify-between items-center md:py-6 md:px-10 bg-gradient-to-r from-[#d4d6e3] via-[#eaecf0] to-[#d4d6e3] font-[sfpro] fixed w-full z-50 px-4 py-3 max-w-[1444px]">
+      <nav className="flex justify-between items-center md:py-6 md:px-10 bg-gradient-to-r from-[#d4d6e3] via-[#eaecf0] to-[#d4d6e3] font-[sfpro] fixed w-full z-50 px-4 py-3">
         <img src={logo} alt="logo" />
 
         {/* <div className="flex items-center space-x-2 md:space-x-6 border w-full"> */}

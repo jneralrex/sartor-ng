@@ -11,7 +11,9 @@ export default function CheckListLeadmagnet() {
             <ScrollToTop />
 
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between">
+      <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-6 md:px-20 ">
+        <div className='flex flex-col md:flex-row items-center justify-between max-w-[1444px] mx-auto'>
+
         <div className="max-w-xl text-center md:text-left">
           <h1 className="text-4xl font-bold mb-4">
             Is Your Business Ready to Harness AI & Automation?
@@ -19,13 +21,14 @@ export default function CheckListLeadmagnet() {
           <p className="mb-6 text-lg">
             Use this proven checklist to uncover gaps, identify opportunities, and plan your next steps
           </p>
-        
         </div>
         <img
           src={bookOne}
           alt="AI & Automation Readiness Checklist"
           className="mt-10 md:mt-0 w-60 md:w-72"
         />
+        </div>
+        
       </header>
 
       {/* This Checklist Section */}

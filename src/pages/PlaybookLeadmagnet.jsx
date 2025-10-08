@@ -11,27 +11,29 @@ export default function PlaybookLeadMagnet() {
             <ScrollToTop />
 
             {/* Header */}
-            <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between">
-                <div className="max-w-xl text-center md:text-left">
-                    <h1 className="text-4xl font-bold mb-4">
-                        Your Roadmap to Building a Resilient, Profitable Product Business          </h1>
-                    <p className="mb-6 text-lg">
-                        Learn the strategies, systems, and tools successful companies use to scale confidently.
-                    </p>         
-                    
+            <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-6 md:px-20 ">
+                <div className='flex flex-col md:flex-row items-center justify-between max-w-[1444px] mx-auto'>
+                    <div className="max-w-xl text-center md:text-left">
+                        <h1 className="text-4xl font-bold mb-4">
+                            Your Roadmap to Building a Resilient, Profitable Product Business          </h1>
+                        <p className="mb-6 text-lg">
+                            Learn the strategies, systems, and tools successful companies use to scale confidently.
+                        </p>
+
+                    </div>
+                    <img
+                        src={bookThree}
+                        alt="AI & Automation Readiness Checklist"
+                        className="mt-10 md:mt-0 w-60 md:w-72"
+                    />
                 </div>
-                <img
-                    src={bookThree}
-                    alt="AI & Automation Readiness Checklist"
-                    className="mt-10 md:mt-0 w-60 md:w-72"
-                />
             </header>
 
             {/* This Checklist Section */}
             <section className="max-w-4xl mx-auto my-12 px-6 text-center">
                 <h2 className="text-2xl font-semibold mb-3">This Playbook</h2>
                 <p className="text-gray-700 max-w-xl mx-auto">
-This playbook is your step-by-step guide to go from surviving to thriving. If you're a founder building a product brand—especially in FMCG, pharma, or distribution—this is for you.                 </p>
+                    This playbook is your step-by-step guide to go from surviving to thriving. If you're a founder building a product brand—especially in FMCG, pharma, or distribution—this is for you.                 </p>
             </section>
 
             {/* What You'll Get */}
@@ -68,7 +70,7 @@ This playbook is your step-by-step guide to go from surviving to thriving. If yo
 
 
             <div>
-                        <ZohoOptinForm />
+                <ZohoOptinForm />
 
             </div>
 

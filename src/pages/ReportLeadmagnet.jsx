@@ -11,8 +11,9 @@ export default function ReportLeadmagnet() {
             <ScrollToTop />
 
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between">
-        <div className="max-w-xl text-center md:text-left">
+  <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-6 md:px-20 ">
+                <div className='flex flex-col md:flex-row items-center justify-between max-w-[1444px] mx-auto'>        
+                <div className="max-w-xl text-center md:text-left">
           <h1 className="text-4xl font-bold mb-4">
             Discover How Leading Brands Are Protecting Billions in Revenue From Counterfeiting in 2025
           </h1>
@@ -25,6 +26,7 @@ export default function ReportLeadmagnet() {
           alt="AI & Automation Readiness Checklist"
           className="mt-10 md:mt-0 w-60 md:w-72"
         />
+        </div>
       </header>
 
       {/* This Checklist Section */}

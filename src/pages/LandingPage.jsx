@@ -76,10 +76,10 @@ const LandingPage = () => {
 
 
     return (
-        <div className=" md:px-0 pt-[50px] md:pt-[80px] min-h-screen font-[sfpro] max-w-[1444px]">
+        <div className="md:px-0 min-h-screen font-[sfpro]">
 
             {/* Hero Section */}
-            <section className=" min-h-screen bg-gradient-to-tl from-[#d4d6e3] via-[#eaecf0] to-[#d4d6e3]">
+            <section className=" bg-gradient-to-tl from-[#d4d6e3] via-[#eaecf0] to-[#d4d6e3] py-10 md:py-28">
 
                 <div className="text-center flex flex-col justify-center items-center w-full max-w-[830px] mx-auto p-10">
 
@@ -112,8 +112,8 @@ const LandingPage = () => {
 
 
             {/* About Us */}
-            <section className="bg-white py-20 px-6 md:px-20 max-w-[1199px] mx-auto w-full">
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <section className="bg-white py-10 md:py-28 px-6 md:px-20">
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 lg:gap-20 items-center">
                     <img
                         src={pippics}
                         alt="Team meeting"
@@ -135,8 +135,8 @@ const LandingPage = () => {
 
 
             {/* Services */}
-            <section className=" max-w-[1199px] mx-auto w-full px-6">
-                <div className="mb-12 md:text-start text-center">
+            <section className=" max-w-[1199px] mx-auto w-full px-6 py-10 md:py-16">
+                <div className="mb-12 text-start">
                     <h2 className="text-3xl md:text-[42px] font-bold text-gray-900">Our Services</h2>
                     <p className="mt-4 text-gray-600 max-w-2xl mx-auto md:mx-0 md:w-[600px]">
                         We combine deep industry knowledge with cutting-edge technology to offer solutions that
@@ -144,9 +144,9 @@ const LandingPage = () => {
                     </p>
                 </div>
 
-                <div className="flex md:flex-col gap-8 justify-center items-center">
+                <div className="">
 
-                    <div className="flex flex-col md:flex-row bg-white p-4 rounded-md gap-4">
+                    <div className="flex flex-col md:flex-row bg-white rounded-md gap-4">
                         {/* Image Section */}
                         <div className="">
                             <img
@@ -192,9 +192,9 @@ const LandingPage = () => {
 
             {/* Who We Partner With */}
             <section className="bg-black text-white py-8 md:py-16">
-                <div className="max-w-[1199px]  mx-auto w-full items-center">
+                <div className="items-center">
                     <h2 className="text-center text-3xl md:text-[42px] font-semibold mb-2 md:mb-12">Who We Partner With</h2>
-                    <div className="flex flex-col gap-[5px] md:grid md:grid-flow-col md:gap-10 mx-auto items-center justify-center p-5 ">
+                    <div className="flex flex-col gap-[20px] md:grid md:grid-flow-col md:gap-10 mx-auto lg:gap-28 items-center justify-center p-5 ">
                         {/* Tabs List */}
                         <div className="flex flex-col justify-center h-full">
                             <p className="mb-3 md:mb-6 text-sm text-gray-300 text-center md:text-[28px] md:text-left">
