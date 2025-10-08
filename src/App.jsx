@@ -26,6 +26,7 @@ const router = createBrowserRouter(
         <Route index element={<LandingPage />} />
       </Route>
       <Route >
+
         <Route path="checklist" element={<CheckListLeadmagnet />} />
         <Route path='report' element={<ReportLeadmagnet/>} />
         <Route path='playbook' element={<PlaybookLeadMagnet/>} />

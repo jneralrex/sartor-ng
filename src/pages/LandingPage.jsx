@@ -47,29 +47,32 @@ const LandingPage = () => {
     ];
 
     const items = [
-  {
-    title: 'Sartor LMS',
-    content: 'A learning platform for team onboarding, training, and building workforce excellence.',
-    buttonText: 'Learn More',
-  },
-  {
-    title: 'Sartor Chain',
-    content: 'A learning platform for team onboarding, training, and building workforce excellence.',
-    buttonText: 'Learn More',
-  },
-  {
-    title: 'Business Consulting',
-    content: 'One-on-one support to help founders build brands, boost sales, and lead operations effectively.',
-    buttonText: 'Learn More',
-  },
-  {
-    title: 'Sartor CRM',
-    content: 'Our CRM boosts sales, streamlines LPOs, maps retail, and prevents counterfeiting with AI + Blockchain.',
-    buttonText: 'Learn More',
-  },
-];
+        {
+            title: 'Sartor LMS',
+            content: 'A learning platform for team onboarding, training, and building workforce excellence.',
+            buttonText: 'Learn More',
+            link: ""
+        },
+        {
+            title: 'Sartor Chain',
+            content: 'A learning platform for team onboarding, training, and building workforce excellence.',
+            buttonText: 'Learn More',
+            link: "https://crm.sartor.ng/sartor-chain"
+        },
+        {
+            title: 'Business Consulting',
+            content: 'One-on-one support to help founders build brands, boost sales, and lead operations effectively.',
+            buttonText: 'Learn More',
+        },
+        {
+            title: 'Sartor CRM',
+            content: 'Our CRM boosts sales, streamlines LPOs, maps retail, and prevents counterfeiting with AI + Blockchain.',
+            buttonText: 'Learn More',
+            link: "https://crm.sartor.ng"
+        },
+    ];
     const [activeIndex, setActiveIndex] = useState(0);
-      const [openIndex, setOpenIndex] = useState(0); 
+    const [openIndex, setOpenIndex] = useState(0);
 
 
     return (
@@ -78,7 +81,7 @@ const LandingPage = () => {
             {/* Hero Section */}
             <section className=" min-h-screen bg-gradient-to-tl from-[#d4d6e3] via-[#eaecf0] to-[#d4d6e3]">
 
-                <div className="text-center justify-center items-center w-full max-w-[830px] mx-auto p-10">
+                <div className="text-center flex flex-col justify-center items-center w-full max-w-[830px] mx-auto p-10">
 
                     <h1 className=" w-full max-w-[500px] mx-auto text-[27px] sm:text-[35px] md:text-5xl font-bold text-[#000068]">
                         Custom Tech and Advice To Start And Grow Your Business.
@@ -86,10 +89,10 @@ const LandingPage = () => {
                     <p className="mt-3 w-full max-w-[590px] sm:mt-6 sm:text-[20px] text-gray-600 mx-auto">
                         You can’t grow what you can’t control. Without the right systems, starting, branding, growing, and leading a product-based business feel like guesswork.
                     </p>
-                    <div className="mt-3 sm:mt-8 flex flex-col md:flex-row justify-center items-center gap-4">
+                    <div className="mt-3 sm:mt-8 flex flex-col border-2 md:flex-row justify-center items-center gap-4 w-full">
                         <Link
                             to="https://calendly.com/sartorlimited/1-on-1-free-30mins-introductory-consulting-call-official"
-                            className="w-48 text-center bg-[#00A859] text-white px-5 py-2 rounded-xl text-[9px] md:text-sm sm:py-[15px]"
+                            className=" w-full md:w-48 text-center bg-[#00A859] text-white px-5 rounded-xl md:text-sm py-[15px]"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -97,7 +100,7 @@ const LandingPage = () => {
                         </Link>
 
                         <Link
-                            className="w-48 text-center bg-white text-[#000068] text-[9px] md:text-sm px-5 py-2 rounded-xl sm:py-[15px]"
+                            className=" w-full md:w-48 text-center bg-white text-[#000068] md:text-sm px-5 rounded-xl py-[15px]"
                         >
                             Learn More
                         </Link>
@@ -121,8 +124,8 @@ const LandingPage = () => {
                             About Us / Our Mission
                         </h2>
                         <p className="text-gray-700 text-sm leading-relaxed md:text-[18px] lg:leading-[160%] max-w-[680px] mx-auto w-full">
-                            Sartor Limited is dedicated to transforming businesses in frontier, emerging, and developed markets through innovative technology and expert guidance. 
-                            We understand the unique complexities faced by product-based companies and offer tailored solutions that build confidence, optimise operations, and secure market leadership. 
+                            Sartor Limited is dedicated to transforming businesses in frontier, emerging, and developed markets through innovative technology and expert guidance.
+                            We understand the unique complexities faced by product-based companies and offer tailored solutions that build confidence, optimise operations, and secure market leadership.
                             Our commitment is to partner with you from inception to scale, ensuring you achieve the success you have imagined.
                         </p>
                     </div>
@@ -141,9 +144,9 @@ const LandingPage = () => {
                     </p>
                 </div>
 
-                <div className="flex md:flex-col gap-8 justify-center items-center">  
+                <div className="flex md:flex-col gap-8 justify-center items-center">
 
-                         <div className="flex flex-col md:flex-row bg-white p-4 rounded-md gap-4">
+                    <div className="flex flex-col md:flex-row bg-white p-4 rounded-md gap-4">
                         {/* Image Section */}
                         <div className="">
                             <img
@@ -160,7 +163,8 @@ const LandingPage = () => {
                                     key={index}
                                     className={`border rounded-xl p-4 cursor-pointer transition-all ${openIndex === index ? 'border-green-500 shadow-md' : 'border-gray-200'
                                         }`}
-                                    onClick={() => setOpenIndex(index)}
+                                    // onClick={() => setOpenIndex(index)}
+                                    onMouseEnter={() => setOpenIndex(index)}
                                 >
                                     <h2 className="text-lg font-semibold">{item.title}</h2>
                                     {openIndex === index && item.content && (
@@ -168,7 +172,12 @@ const LandingPage = () => {
                                             <p>{item.content}</p>
                                             {item.buttonText && (
                                                 <button className="mt-3 px-4 py-2 bg-[#00A859] text-white text-sm  hover:bg-green-600 rounded-xl">
-                                                    {item.buttonText}
+                                                    <Link to={item.link}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        {item.buttonText}
+                                                    </Link>
                                                 </button>
                                             )}
                                         </div>
@@ -195,7 +204,7 @@ const LandingPage = () => {
                                 {partners.map((partner, index) => (
                                     <li
                                         key={index}
-                                        onClick={() => setActiveIndex(index)}
+                                        onMouseEnter={() => setActiveIndex(index)}
                                         className={`cursor-pointer px-5 py-2 md:px-5 md:py-3 text-center items-center flex text-[14px] md:text-[24px] border rounded-md transition-all duration-200 ${index === activeIndex
                                             ? "bg-[#000068] text-white border-[#00A859]"
                                             : "border-gray-500 text-white hover:bg-gray-800"
@@ -253,24 +262,26 @@ const LandingPage = () => {
                     ))}
                 </div>
                 <div className="text-center">
-                <button className="bg-[#00A859] hover:bg-green-600 text-[white] font-semibold py-3 rounded-xl shadow max-w-[254px] w-full">
+                    <button className="bg-[#00A859] hover:bg-green-600 text-[white] font-semibold py-3 rounded-xl shadow max-w-[254px] w-full">
 
                         View All Posts
                     </button>
                 </div>
             </section>
 
-            {/* Checclist */}
+            {/* Checklist */}
             <section className="py-10 px-4 text-center w-full mx-auto space-y-2 bg-[#F5F5F5] rounded-xl mb-20">
                 <h2 className="text-[25px] md:max-w-[558px] mx-auto md:text-[42px] font-semibold leading-10">
                     Want To Start A Business, But Don’t Know How?
                 </h2>
                 <p className="text-[#767676] text-[18px] max-w-[566px] md:text-[20px] mx-auto font-medium">
-                    Download our exclusive Free Startup Checklist a comprehensive 
-                    guide to navigating the early stages of building a successful product-based business in emerging markets.               
-                     </p>
+                    Download our exclusive Free Startup Checklist a comprehensive
+                    guide to navigating the early stages of building a successful product-based business in emerging markets.
+                </p>
                 <button className="bg-[#00A859] hover:bg-green-600 text-[white] font-semibold py-3 rounded-xl shadow max-w-[254px] w-full">
+                    <Link to="/checklist">
                     Get the Free Checklist
+                    </Link>
                 </button>
             </section>
         </div>

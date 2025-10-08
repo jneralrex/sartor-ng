@@ -1,12 +1,14 @@
 import bookTwo from '../assets/images/bookTwo.png';
 import tabTwo from '../assets/images/tabTwo.png';
 import EmailForm from '../components/EmailForm';
+import ScrollToTop from '../components/ScrollToTop';
 import ZohoOptinForm from '../components/ZohoOptinForm';
 
 
 export default function ReportLeadmagnet() {
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
+            <ScrollToTop />
 
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between">
@@ -16,8 +18,7 @@ export default function ReportLeadmagnet() {
           </h1>
           <p className="mb-6 text-lg">
             Discover the trends, technologies, and strategies that are shaping the future of secure product distribution          </p>
-          {/* <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-md font-semibold">
-            Download Free Report          </button> */}
+        
         </div>
         <img
           src={bookTwo}

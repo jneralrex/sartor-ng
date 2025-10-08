@@ -1,12 +1,14 @@
 import bookOne from '../assets/images/bookOne.png';
 import tabOne from '../assets/images/tabOne.png';
 import EmailForm from '../components/EmailForm';
+import ScrollToTop from '../components/ScrollToTop';
 import ZohoOptinForm from '../components/ZohoOptinForm';
 
 
 export default function CheckListLeadmagnet() {
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
+            <ScrollToTop />
 
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between">
@@ -17,9 +19,7 @@ export default function CheckListLeadmagnet() {
           <p className="mb-6 text-lg">
             Use this proven checklist to uncover gaps, identify opportunities, and plan your next steps
           </p>
-          {/* <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-md font-semibold">
-            Download Free Checklist
-          </button> */}
+        
         </div>
         <img
           src={bookOne}
