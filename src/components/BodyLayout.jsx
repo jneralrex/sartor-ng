@@ -6,7 +6,7 @@ import ScrollToTop from './ScrollToTop'
 
 const BodyLayout = () => {
     return (
-        <div>
+        <div className='max-w-[1440px] mx-auto'>
             <ScrollToTop />
             <Navbar />
             <Outlet />

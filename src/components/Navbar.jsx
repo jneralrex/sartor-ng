@@ -15,10 +15,9 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <nav className="flex justify-between items-center md:py-6 md:px-10 bg-gradient-to-r from-[#d4d6e3] via-[#eaecf0] to-[#d4d6e3] font-[sfpro] fixed w-full z-50 px-4 py-3">
+      <nav className="flex justify-between items-center md:py-6 md:px-20 bg-gradient-to-r from-[#d4d6e3] via-[#eaecf0] to-[#d4d6e3] font-[sfpro] fixed w-full z-50 px-4 py-3 max-w-[1440px] mx-auto">
         <img src={logo} alt="logo" />
 
-        {/* <div className="flex items-center space-x-2 md:space-x-6 border w-full"> */}
         {/* Desktop Menu */}
         <ul className="hidden md:flex md:justify-between space-x-1 md:space-x-8 text-gray-700 text-[9px] md:text-sm font-medium relative">
           <li><a href="#">About Us</a></li>
@@ -68,17 +67,20 @@ const Navbar = () => {
             )}
           </li>
 
+          <li><a href="#">Resources</a></li>
+
           <li><a href="#">Blog</a></li>
         </ul>
 
-        {/* Book Button */}
+      <div className='flex justify-between gap-2'>
+          {/* Book Button */}
         <Link
           to="https://calendly.com/sartorlimited/1-on-1-free-30mins-introductory-consulting-call-official"
-          className="bg-[#00A859] hover:bg-green-600 text-white px-6 py-2 rounded-xl font-medium text-[12px] lg:text-[14px]"
+           className=" w-full md:w-44 text-center bg-[#00A859] text-white  rounded-lg text-[12px] py-[6px] md:text-[13.8px] lg:py-[16px] px-2"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Book a Consultation
+          Book a Free Consultation
         </Link>
 
         {/* Mobile Menu Toggle */}
@@ -94,7 +96,7 @@ const Navbar = () => {
             )}
           </button>
         </div>
-        {/* </div> */}
+      </div>
       </nav>
 
       {/* Mobile Slide-Out Menu */}
