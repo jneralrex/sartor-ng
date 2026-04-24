@@ -15,11 +15,13 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <nav className="flex justify-between items-center md:py-6 md:px-20 bg-gradient-to-r from-[#d4d6e3] via-[#eaecf0] to-[#d4d6e3] font-[sfpro] fixed w-full z-50 px-4 py-3 max-w-[1440px] mx-auto">
+      <nav className='bg-gradient-to-r from-[#d4d6e3] via-[#eaecf0] to-[#d4d6e3]'>
+
+      <div className="flex justify-between items-center md:py-6 md:px-20 font-[sfpro] w-full z-50 px-4 py-3 max-w-[1440px] mx-auto relative">
         <img src={logo} alt="logo" />
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex md:justify-between space-x-1 md:space-x-8 text-gray-700 text-[9px] md:text-sm font-medium relative">
+        <ul className="hidden md:flex md:justify-between space-x-1 md:space-x-8 text-gray-700 text-[9px] md:text-sm font-medium relative items-center">
           <li><a href="#">About Us</a></li>
 
           {/* Dropdown for Our Services */}
@@ -34,7 +36,7 @@ const Navbar = () => {
             </span>
 
             {isServicesOpen && (
-              <div className="absolute top-full bg-white shadow-lg rounded-lg w-48 p-2 z-50 flex flex-col justify-center items-center">
+              <div className="absolute top-full bg-white shadow-lg rounded-lg w-48 z-50 flex flex-col justify-center items-left text-left">
                 <Link
                   to="https://crm.sartor.ng"
                   target="_blank"
@@ -76,7 +78,7 @@ const Navbar = () => {
           {/* Book Button */}
         <Link
           to="https://calendly.com/sartorlimited/1-on-1-free-30mins-introductory-consulting-call-official"
-           className=" w-full md:w-44 text-center bg-[#00A859] text-white  rounded-lg text-[12px] py-[6px] md:text-[13.8px] lg:py-[16px] px-2"
+           className=" w-full md:w-44 text-center bg-[#00A859] text-white  rounded-lg text-[12px] py-[6px] md:text-[13.8px] lg:py-[10px] px-2"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -96,6 +98,7 @@ const Navbar = () => {
             )}
           </button>
         </div>
+      </div>
       </div>
       </nav>
 

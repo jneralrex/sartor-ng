@@ -17,6 +17,8 @@ import CheckListLeadmagnet from './pages/CheckListLeadmagnet';
 import ReportLeadmagnet from './pages/ReportLeadmagnet';
 import PlaybookLeadMagnet from './pages/PlaybookLeadmagnet';
 import BluePrintLeadmagnet from './pages/BluePrintLeadmagnet';
+import TermsOfUse from './pages/TermsOfUse';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,10 +30,11 @@ const router = createBrowserRouter(
       <Route >
 
         <Route path="checklist" element={<CheckListLeadmagnet />} />
-        <Route path='report' element={<ReportLeadmagnet/>} />
-        <Route path='playbook' element={<PlaybookLeadMagnet/>} />
-        <Route path='blueprint' element={<BluePrintLeadmagnet/>} />
-      </Route>
+        <Route path='report' element={<ReportLeadmagnet />} />
+        <Route path='playbook' element={<PlaybookLeadMagnet />} />
+        <Route path='blueprint' element={<BluePrintLeadmagnet />} />
+        <Route path="terms-condition" element={<TermsOfUse />} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />      </Route>
     </Route>
   )
 );

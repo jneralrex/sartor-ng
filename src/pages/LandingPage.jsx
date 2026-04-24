@@ -162,7 +162,7 @@ const LandingPage = () => {
 
 
     return (
-        <div className="md:px-0  font-[sfpro] max-w-[1440px] mx-auto">
+        <div className="md:px-0  font-[sfpro]">
 
             {/* Hero Section */}
             <section className=" bg-gradient-to-r from-[#d4d6e3] via-[#eaecf0] to-[#d4d6e3] md:py-28 min-h-screen flex flex-col justify-center items-center px-4">
@@ -192,15 +192,15 @@ const LandingPage = () => {
                     >
                         <Link
                             to="https://calendly.com/sartorlimited/1-on-1-free-30mins-introductory-consulting-call-official"
-                            className=" w-full md:w-48 lg:w-[205px] text-center bg-[#00A859] text-white  rounded-xl md:text-[16px] py-[15px]"
+                            className=" w-full md:w-48 lg:w-[205px] text-center bg-[#00A859] text-white rounded-xl md:text-[16px] lg:py-[10px] px-2"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Get a Free Consultation
+                            Book a Free Consultation
                         </Link>
 
                         <Link
-                            className=" w-full md:w-48 lg:w-[205px] text-center bg-white text-[#000068] rounded-xl md:text-[16px] py-[15px]"
+                            className=" w-full md:w-48 lg:w-[205px] text-center bg-white text-[#000068] rounded-xl md:text-[16px] lg:py-[10px] px-2"
                         >
                             Learn More
                         </Link>
@@ -213,7 +213,7 @@ const LandingPage = () => {
 
 
             {/* About Us */}
-            <section className="py-8  px-6 md:px-20 md:py-20">
+            <section className="py-8  px-6 md:px-20 md:py-20 max-w-[1440px] mx-auto">
 
                 <motion.div 
                     className="grid md:grid-cols-2 gap-8 lg:gap-0 items-center"
@@ -250,7 +250,7 @@ const LandingPage = () => {
 
 
             {/* Services */}
-            <section className=" px-6 pb-8 md:px-20 md:pb-20">
+            <section className=" px-6 pb-8 md:px-20 md:pb-20 max-w-[1440px] mx-auto">
                 <motion.div 
                     className="mb-10 text-start"
                     initial="hidden"
@@ -337,7 +337,7 @@ const LandingPage = () => {
 
             {/* Who We Partner With */}
             <section className="bg-black text-[#F9F9F9] py-8 md:py-20">
-                <div className="">
+                <div className=" max-w-[1440px] mx-auto px-6 md:px-20">
                     <motion.h2 
                         className="text-center text-[32px] font-semibold mb-2 md:mb-12"
                         initial="hidden"
@@ -385,7 +385,7 @@ const LandingPage = () => {
                             <motion.img
                                 src={partners[activeIndex].image}
                                 alt={partners[activeIndex].name}
-                                className="rounded-lg object-cover w-[250px] md:h-[420px] md:w-full"
+                                className="rounded-lg object-cover w-[250px] md:h-[420px] md:w-[350px] lg:w-[450px]"
                                 layoutId="partner-image"
                                 transition={{ duration: 0.3, ease: "easeInOut" }}
                             />
@@ -396,7 +396,7 @@ const LandingPage = () => {
             </section>
 
             {/* Testimonials */}
-            <section className="px-6 md:px-20 md:py-20 py-5 mt-10 overflow-hidden">
+            <section className="px-6 md:px-20 md:py-20 py-5 mt-10 overflow-hidden max-w-[1440px] mx-auto">
                 <motion.h2 
                     className="text-center text-2xl md:text-[40px] font-semibold text-[#161C2D] mb-12"
                     initial="hidden"
@@ -475,12 +475,15 @@ const LandingPage = () => {
                     viewport={{ once: true }}
                     variants={fadeInUp}
                 >
-                    <button className="bg-[#00A859] hover:bg-green-600 text-[white] py-3 rounded-xl shadow max-w-[254px] w-full">
+                    <button 
+                         className=" w-full md:w-44 text-center bg-[#00A859] text-white  rounded-lg text-[12px] py-[6px] md:text-[13.8px] lg:py-[10px] px-2"
+                    >
 
                         View All Posts
                     </button>
                 </motion.div>
             </section>
+            
             <motion.section 
                 className="px-20 text-center mb-20"
                 initial="hidden"
@@ -505,7 +508,7 @@ const LandingPage = () => {
                         Free Startup Checklist to launch your product in emerging markets.
                     </motion.p>
                     <motion.button 
-                        className="bg-[#00A859] hover:bg-green-600 text-[white] py-3 rounded-xl shadow max-w-[254px] w-full mt-4"
+                        className=" w-full md:w-44 text-center bg-[#00A859] text-white  rounded-lg text-[12px] py-[6px] md:text-[13.8px] lg:py-[10px] px-2 mt-4"
                         variants={fadeInUp}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
